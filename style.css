@@ -1,67 +1,63 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Header */
 header {
-  background: #0077b6;
-  color: white;
   text-align: center;
-  padding: 20px;
+  background: #222;
+  color: white;
+  padding: 20px 10px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 32px;
-}
-
-header p {
-  font-size: 18px;
-  margin-top: 5px;
-}
-
-/* Gallery 4 cột */
+/* Gallery */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cột đều nhau */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
   padding: 20px;
 }
 
-.item {
+.card {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;
   padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s;
-  
 }
 
-.item:hover {
-  transform: scale(1.05);
+.card:hover {
+  transform: scale(1.03);
 }
 
-.item img {
-  width: 80%;
-  height: 80%;         /* Rộng bằng cột (~300px) */        /* Cao 300px để thành hình vuông */
-  object-fit: cover;    /* Cắt ảnh cho đẹp, không méo */
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;  /* Luôn vuông */
+  object-fit: cover;   /* Không méo hình */
   border-radius: 8px;
 }
 
-.item h3 {
+.card h3 {
   margin: 10px 0 5px;
+  font-size: 1.1em;
 }
 
-.item p {
-  color: #555;
-}
-
+/* Footer */
 footer {
-  background: #333;
+  background: #222;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 15px 10px;
+  margin-top: 20px;
 }
